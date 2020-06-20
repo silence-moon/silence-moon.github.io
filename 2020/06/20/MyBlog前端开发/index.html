@@ -514,11 +514,11 @@
 - 可以查看单个博客内容
 - 可以对博客内容进行评论
 - 可以赞赏博客
-- 可以扫码关注</code></pre><h3 id="2-3-功能图一览"><a href="#2-3-功能图一览" class="headerlink" title="2.3 功能图一览"></a>2.3 功能图一览</h3><p>这里偷个懒，我就直接放上人家做好的功能思维导图了。<br><img src="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%9B%BE.png" alt="功能思维导图"></p>
+- 可以扫码关注</code></pre><h3 id="2-3-功能图一览"><a href="#2-3-功能图一览" class="headerlink" title="2.3 功能图一览"></a>2.3 功能图一览</h3><p>这里偷个懒，我就直接放上人家做好的功能思维导图了。<br><img src="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%9B%BE.png" alt="功能思维导图"></p>
 <h2 id="三、前端页面开发"><a href="#三、前端页面开发" class="headerlink" title="三、前端页面开发"></a>三、前端页面开发</h2><h3 id="3-1-开发工具"><a href="#3-1-开发工具" class="headerlink" title="3.1 开发工具"></a>3.1 开发工具</h3><pre><code>- HbuildX
 - Semantic UI </code></pre><p><a href="https://semantic-ui.com/" target="_blank" rel="noopener">Semantic官网地址</a></p>
 <h3 id="3-2-页面规划"><a href="#3-2-页面规划" class="headerlink" title="3.2 页面规划"></a>3.2 页面规划</h3><pre><code>- 前台展示页面：首页、详情页、分类、标签、归档、关于我
-- 后台管理页面：模板页</code></pre><h3 id="3-3-首页开发"><a href="#3-3-首页开发" class="headerlink" title="3.3 首页开发"></a>3.3 首页开发</h3><p>首先，我们放上一张图片，展示下成果的大体样子：<img src="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E9%A6%96%E9%A1%B5%E6%9E%B6%E6%9E%84.png" alt="首页展示图"></p>
+- 后台管理页面：模板页</code></pre><h3 id="3-3-首页开发"><a href="#3-3-首页开发" class="headerlink" title="3.3 首页开发"></a>3.3 首页开发</h3><p>首先，我们放上一张图片，展示下成果的大体样子：<img src="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E9%A6%96%E9%A1%B5%E6%9E%B6%E6%9E%84.png" alt="首页展示图"></p>
 <p>当然，由于页面大小原因，这里只能截图这么多，感兴趣的也可以去<br><a href="https://silence-moon.github.io/hsilence.github.io-blog/index.html">MyBlog演示地址</a>看看。</p>
 <p>反正大体上也就是三块：导航、中间内容、底部</p>
 <p>而基本上所有的代码实现都是嵌套在</p>
@@ -533,7 +533,7 @@
 <p>右侧卡片主要有四项：分类、标签、最新推荐、扫码关注<br>其中，前三个的框架是一样的，都可以分成上下2个部分。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 中间内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"m-container m-padding-tb-big"</span> <span class="attr">id</span>=<span class="string">"waypoint"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui container"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui stackable grid"</span>&gt;</span></span><br><span class="line">			<span class="comment">&lt;!-- 文章内容部分 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"eleven wide column"</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 头部：使用attached让上下连到一起 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui top attached segment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 文章列表：使用attached让上下连到一起 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui attached segment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 底部：上一页、下一页 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui bottom attached segment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			</span><br><span class="line">			<span class="comment">&lt;!-- 右侧卡片 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"five wide column"</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 分类卡片 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui segments"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 标签卡片 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui segments m-margin-top-large"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 最新推荐卡片 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui segments m-margin-top-large"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 二维码 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">"ui horizontal divider header m-margin-top-large"</span>&gt;</span>扫码关注我<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 设置居中格式centered，宽度为11em --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui centered card"</span> <span class="attr">style</span>=<span class="string">"width: 11em;"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./static/images/MyBlog.png"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"ui rounded image"</span> &gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="3-3-3-底部栏"><a href="#3-3-3-底部栏" class="headerlink" title="3.3.3 底部栏"></a>3.3.3 底部栏</h4><p>底部栏可以分成上下2块，上侧又分成4格（注：一个grid总共有16column，可根据情况自行选择大小）<br><img src="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%BA%95%E9%83%A8%E6%A0%8F%E6%9E%B6%E6%9E%84.png" alt="底部栏展示"></p>
+<h4 id="3-3-3-底部栏"><a href="#3-3-3-底部栏" class="headerlink" title="3.3.3 底部栏"></a>3.3.3 底部栏</h4><p>底部栏可以分成上下2块，上侧又分成4格（注：一个grid总共有16column，可根据情况自行选择大小）<br><img src="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%BA%95%E9%83%A8%E6%A0%8F%E6%9E%B6%E6%9E%84.png" alt="底部栏展示"></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 底部栏 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span> <span class="attr">class</span>=<span class="string">"ui inverted vertical segment m-padding-tb-massive"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui center aligned container"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui inverted divided stackable grid"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"three wide column"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"three wide column"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"three wide column"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"seven wide column"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui inverted section divider"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"m-text-thin m-text-spaced m-opacity-tiny"</span>&gt;</span>Copyright 2020 silence Designed by silence<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="四、代码地址"><a href="#四、代码地址" class="headerlink" title="四、代码地址"></a>四、代码地址</h2><p><a href="https://github.com/silence-moon/hsilence.github.io-blog" target="_blank" rel="noopener">前端代码地址</a></p>
@@ -773,36 +773,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/20/images/">
+                <a href="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="images">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">images</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            MyBlog个人博客前端开发作者：silence
+编写日期：2020-06-20
+分类：学习记录
+项目演示地址：MyBlog演示地址
+
+一、背景因为这几天在尝试着搭建一个自己的个人博客平台，然后逛b站的时候就看到一个讲解使用SpringBo
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            silence
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E3%80%81%E5%BC%80%E5%8F%91/" class="post-category">
+                                    学习、开发
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">前端开发</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">博客项目</span>
+                    </a>
+                    
                 </div>
                 
             </div>

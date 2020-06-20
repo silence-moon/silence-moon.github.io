@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, silence&#39;s blog">
+    <meta name="keywords" content="index, silence&#39;s blog">
     <meta name="description" content="This is a blog owned by silence !">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | silence&#39;s blog</title>
+    <title>index | silence&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">index</h1>
                 </div>
             </div>
         </div>
@@ -442,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-06-20
                 </div>
                 
 
@@ -458,20 +458,321 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+	<!-- 设置移动端的浏览设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/me.css"/>
+</head>
+<body>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+	<!-- 导航 -->
+	<!-- 使用UI组件，使用inverted反转默认颜色，attached去圆角，segment表明这是一个片段，自定义上下内边距 -->
+	<nav class="ui inverted attached segment m-padding-tb-mini">
+		<div class="ui container">
+			<!-- 为了适应移动端，这里需要加一个属性stackable,表示可堆叠 -->
+			<div class="ui inverted secondary stackable menu">
+				<!-- 添加logo，导航菜单 -->
+				<h2 class="ui teal header item">Blog</h2>
+				<a href="index.html" class="active menu-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+				<a href="types.html" class="menu-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+				<a href="tags.html" class="menu-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+				<a href="archives.html" class="menu-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+				<a href="#" class="menu-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+				
+				<div class="right menu-item item m-mobile-hide">
+					<div class="ui icon input">
+						<input type="text" placeholder="Search..."/>
+						<i class="search link icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 设置手机端响应时显示个菜单图标 -->
+		<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+			<i class="sidebar icon"></i>
+		</a>
+	</nav>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+	<!-- 中间内容 -->
+	<div class="m-container m-padding-tb-big" id="waypoint">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<!-- 文章内容部分 -->
+				<div class="eleven wide column">
+					<!-- 头部：使用attached让上下连到一起 -->
+					<div class="ui top attached segment">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+								<h3 class="ui teal header">博客</h3>
+							</div>
+							<div class="right aligned column">
+								共 <h2 class="ui orange header m-inline-blok m-text-thin"> 14 </h2> 篇
+							</div>
+						</div>
+					</div>
+					
+					<!-- 文章列表：使用attached让上下连到一起 -->
+					<div class="ui attached segment">				
+						<div class="ui padding vertical segment m-padding-tb-big">
+							<!-- 文章：这里为了让图片显示在上方，还需要添加：mobile reversed -->
+							<div class="ui mobile reversed stackable grid">
+								<!-- 左侧内容 -->
+								<div class="eleven wide column">
+									<a href="blog.html"><h3 class="ui header">What is fly ?</h3></a>
+									<p class="m-text">飞翔是享受自由的最高境界！</p>
+									<div class="ui stackable grid">
+										<div class="eleven wide column">
+											<div class="ui mini horizontal link list">
+												<div class="item">
+													<img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+													<div class="content"><a href="#" class="header">silence</a></div>
+												</div>
+												<div class="item">
+													<!-- 设置时间样式的图标 -->
+													<i class="calendar icon"></i>2020-06-19
+												</div>
+												<div class="item">
+													<i class="eye icon"></i>2020
+												</div>
+											</div>
+										</div>
+										<div class="right aligned five wide column">
+											<a href="#" target="_blank" class="ui teal basic label m-padding-tiny m-text-thin">认知升级</a>
+										</div>
+									</div>
+								</div>	
+								<!-- 右侧图片 -->
+								<div class="five wide column">
+									<a href="#" target="_blank">
+										<img src="https://unsplash.it/800/450?image=1005" class="ui rounded image">
+									</a>
+								</div>					
+							</div>						
+						</div>						
+						
+						<div class="ui padding vertical segment m-padding-tb-big">
+							<!-- 文章：这里为了让图片显示在上方，还需要添加：mobile reversed -->
+							<div class="ui mobile reversed stackable grid">
+								<!-- 左侧内容 -->
+								<div class="eleven wide column">
+									<h3 class="ui header">What is fly ?</h3>
+									<p class="m-text">飞翔是享受自由的最高境界！</p>
+									<div class="ui stackable grid">
+										<div class="eleven wide column">
+											<div class="ui mini horizontal link list">
+												<div class="item">
+													<img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+													<div class="content"><a href="#" class="header">silence</a></div>
+												</div>
+												<div class="item">
+													<!-- 设置时间样式的图标 -->
+													<i class="calendar icon"></i>2020-06-19
+												</div>
+												<div class="item">
+													<i class="eye icon"></i>2020
+												</div>
+											</div>
+										</div>
+										<div class="right aligned five wide column">
+											<a href="#" target="_blank" class="ui teal basic label m-padding-tiny m-text-thin">认知升级</a>
+										</div>
+									</div>
+								</div>	
+								<!-- 右侧图片 -->
+								<div class="five wide column">
+									<a href="#" target="_blank">
+										<img src="https://unsplash.it/800/450?image=1005" class="ui rounded image">
+									</a>
+								</div>					
+							</div>						
+						</div>						
+						
+					</div>
+					<!-- 底部：上一页、下一页 -->
+					<div class="ui bottom attached segment">
+							<div class="ui middle aligned two column grid">
+								<div class="column">
+									<a href="#" class="ui mini teal basic button">上一页</a>
+								</div>
+								<div class="right aligned column">
+									<a href="#" class="ui mini teal basic button">下一页</a>
+								</div>
+							</div>					
+					</div>
+				</div>
+				<!-- 右侧卡片 -->
+				<div class="five wide column">
+					<!-- 分类卡片 -->
+					<div class="ui segments">
+						<div class="ui secondary segment">
+							<div class="ui two column grid">
+								<div class="column">
+									<i class="idea icon"></i>分类
+								</div>
+								<div class="right aligned column">
+									<a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="ui teal segment">
+							<!-- fluid:填充 -->
+							<div class="ui fluid vertical menu">
+								<a href="#" class="item">
+									学习日志
+									<!-- 设置数量样式 -->
+									<div class="ui teal basic left pointing label">13</div>
+								</a>
+								<a href="#" class="item">
+									思考与感悟
+									<!-- 设置数量样式 -->
+									<div class="ui teal basic left pointing label">13</div>
+								</a>
+								<a href="#" class="item">
+									Python
+									<!-- 设置数量样式 -->
+									<div class="ui teal basic left pointing label">13</div>
+								</a>
+								<a href="#" class="item">
+									SpringBoot
+									<!-- 设置数量样式 -->
+									<div class="ui teal basic left pointing label">13</div>
+								</a>
+								<a href="#" class="item">
+									认知升级
+									<!-- 设置数量样式 -->
+									<div class="ui teal basic left pointing label">13</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 标签卡片 -->
+					<div class="ui segments m-margin-top-large">
+						<div class="ui secondary segment">
+							<div class="ui two column grid">
+								<div class="column">
+									<i class="tags icon"></i>标签
+								</div>
+								<div class="right aligned column">
+									<a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="ui teal segment">
+							<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+								方法论 <div class="detail">23</div>
+							</a>
+							
+							<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+								方法论 <div class="detail">23</div>
+							</a>
+							
+							<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+								方法论 <div class="detail">23</div>
+							</a>
+							
+							<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+								方法论 <div class="detail">23</div>
+							</a>
+							
+							<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+								方法论 <div class="detail">23</div>
+							</a>
+							
+							<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+								方法论 <div class="detail">23</div>
+							</a>
+						</div>
+					</div>
+					
+					<!-- 最新推荐卡片 -->
+					<div class="ui segments m-margin-top-large">
+						<div class="ui secondary segment">
+							<i class="bookmark icon"></i>最新推荐
+						</div>
+						<div class="ui segment">
+							<a href="#" target="_blank" class="m-black m-text-thin">What is fly?</a>
+						</div>
+						<div class="ui segment">
+							<a href="#" target="_blank" class="m-black m-text-thin">What is fly?</a>
+						</div>
+						<div class="ui segment">
+							<a href="#" target="_blank" class="m-black m-text-thin">What is fly?</a>
+						</div>
+						<div class="ui segment">
+							<a href="#" target="_blank" class="m-black m-text-thin">What is fly?</a>
+						</div>
+					</div>
+					
+					<!-- 二维码 -->
+					<h4 class="ui horizontal divider header m-margin-top-large">扫码关注我</h4>
+					<!-- 设置居中格式centered，宽度为11em -->
+					<div class="ui centered card" style="width: 11em;">
+						<img src="./static/images/wechatpay.jpg" alt="" class="ui rounded image" >
+					</div>
+					
+				</div>
+			</div>
+		</div>	
+	</div>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+	
+	<!-- 底部栏 -->
+	<footer class="ui inverted vertical segment m-padding-tb-massive">
+		<div class="ui center aligned container">
+			<div class="ui inverted divided stackable grid">
+				<div class="three wide column">
+					<h4 class="ui inverted header">扫码关注</h4>
+					<div class="ui inverted link list">
+						<div class="item">
+							<!-- 图片设置为圆角，并使用内联样式控制图片大小 -->
+							<img src="./static/images/wechatpay.jpg" class="ui rounded image" alt="" style="width:6.25rem;">
+						</div>								
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header">最新博客</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">用户故事(User Story)</a>
+						<a href="#" class="item">用户故事(User Story)</a>
+						<a href="#" class="item">用户故事(User Story)</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header">联系我</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Email:406685901@qq.com</a>
+						<a href="#" class="item">QQ:406685901</a>
+					</div>
+				</div>
+				<div class="seven wide column">
+					<h4 class="ui inverted header">Blog</h4>
+					<p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客，会分享关于编程、思考等等相关的任何内容，希望可以对来到此站的朋友有所帮助！</p>
+				</div>
+			</div>
+			<div class="ui inverted section divider"></div>
+			<p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright 2020 silence Designed by silence</p>		
+		</div>
+	</footer>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+	
+	<!-- 手机端点击menu按钮时显示菜单 -->
+	<script>
+		$('.menu.toggle').click(function(){
+			// 点击按钮时检测menu-item内是否有m-mobile-hide属性，有则删除，没有则添上
+			$('.menu-item').toggleClass('m-mobile-hide');
+		});
+	</script>
+	
+</body>
+</html>
             </div>
             <hr/>
 
@@ -496,7 +797,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://silence-moon.github.io/2020/06/18/hello-world/">http://silence-moon.github.io/2020/06/18/hello-world/</a>
+                    <a href="http://silence-moon.github.io/2020/06/20/index/">http://silence-moon.github.io/2020/06/20/index/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,9 +1000,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/20/index/">
                     <div class="card-image">
@@ -747,9 +1049,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -758,6 +1060,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -765,7 +1068,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/06/18/hello-world/">
@@ -795,7 +1098,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

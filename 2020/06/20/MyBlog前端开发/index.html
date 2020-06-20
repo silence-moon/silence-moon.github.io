@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, silence&#39;s blog">
+    <meta name="keywords" content="MyBlog前端开发, silence&#39;s blog">
     <meta name="description" content="This is a blog owned by silence !">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | silence&#39;s blog</title>
+    <title>MyBlog前端开发 | silence&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">MyBlog前端开发</h1>
                 </div>
             </div>
         </div>
@@ -442,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-06-20
                 </div>
                 
 
@@ -458,20 +458,77 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <h1 id="MyBlog个人博客前端开发"><a href="#MyBlog个人博客前端开发" class="headerlink" title="MyBlog个人博客前端开发"></a>MyBlog个人博客前端开发</h1><p>作者：silence</p>
+<p>编写日期：2020-06-20</p>
+<p>分类：学习记录</p>
+<p>项目演示地址：<a href="https://silence-moon.github.io/hsilence.github.io-blog/index.html">MyBlog演示地址</a></p>
+<hr>
+<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><pre><code>因为这几天在尝试着搭建一个自己的个人博客平台，然后逛b站的时候就看到一个讲解使用SpringBoot进行开发
+个人博客的视频，好奇就点进去看了看，尝试了一番，接下来我就来讲一下这个项目，加深一下印象。感兴趣的也可以
+点击（[原视频链接](https://www.bilibili.com/video/BV1PE411f7gS?p=20)）去b站观看。  </code></pre><h2 id="二、项目介绍"><a href="#二、项目介绍" class="headerlink" title="二、项目介绍"></a>二、项目介绍</h2><h3 id="2-1-系统叙述"><a href="#2-1-系统叙述" class="headerlink" title="2.1 系统叙述"></a>2.1 系统叙述</h3><pre><code>作为一个博客，首先我们要能够拥有自己的账号，而且，自己要能够在这个系统里面编写、管理、发布博客。然后，当有人对
+我们的博客感兴趣的时候，人家要能够访问到我们的博客，并进行查看，又或者是留言。</code></pre><h3 id="2-2-功能提取"><a href="#2-2-功能提取" class="headerlink" title="2.2 功能提取"></a>2.2 功能提取</h3><pre><code>从2.1节的叙述中，我们可以发现，一个博客系统，至少拥有2个角色，一个是账号拥有者，或者说是管理员（当然，这里的
+管理员只是针对自己这个账号的），还有一个就是访问者了。</code></pre><h4 id="2-2-1-管理员功能："><a href="#2-2-1-管理员功能：" class="headerlink" title="2.2.1 管理员功能："></a>2.2.1 管理员功能：</h4><pre><code>- 使用用户名和密码登录，然后对博客进行管理
+    * 发布新博客
+    * 对博客进行分类
+    * 添加标签
+    * 修改博客
+    * 删除博客
+    * 根据标题、分类、标签查询博客
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+- 管理博客分类
+    * 新增
+    * 修改
+    * 删除
+    * 根据分类名称进行查询
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+- 管理博客标签
+    * 新增
+    * 修改
+    * 删除
+    * 根据名称查询标签</code></pre><h4 id="2-2-2-访问者功能："><a href="#2-2-2-访问者功能：" class="headerlink" title="2.2.2 访问者功能："></a>2.2.2 访问者功能：</h4><pre><code>- 可以分页查看所有的博客
+- 可以快速查看博客数目最多的5个分类
+- 可以查看所有分类
+- 可以查看某个分类下的博客列表
+- 可以快速查看标记博客最多的6个标签
+- 可以查看所有标签
+- 可以查看某个标签下的博客列表
+- 可以根据时间线查看博客列表
+- 可以快速查看最新的推荐博客
+- 可以用关键字全局搜索博客
+- 可以查看单个博客内容
+- 可以对博客内容进行评论
+- 可以赞赏博客
+- 可以扫码关注</code></pre><h3 id="2-3-功能图一览"><a href="#2-3-功能图一览" class="headerlink" title="2.3 功能图一览"></a>2.3 功能图一览</h3><pre><code>这里偷个懒，我就直接放上人家做好的功能思维导图了。
+![功能思维导图](MyBlog开发_files/1.jpg)</code></pre><h2 id="三、前端页面开发"><a href="#三、前端页面开发" class="headerlink" title="三、前端页面开发"></a>三、前端页面开发</h2><h3 id="3-1-开发工具"><a href="#3-1-开发工具" class="headerlink" title="3.1 开发工具"></a>3.1 开发工具</h3><pre><code>- HbuildX
+- Semantic UI [Semantic官网地址](https://semantic-ui.com/)</code></pre><h3 id="3-2-页面规划"><a href="#3-2-页面规划" class="headerlink" title="3.2 页面规划"></a>3.2 页面规划</h3><pre><code>- 前台展示页面：首页、详情页、分类、标签、归档、关于我
+- 后台管理页面：模板页</code></pre><h3 id="3-3-首页开发"><a href="#3-3-首页开发" class="headerlink" title="3.3 首页开发"></a>3.3 首页开发</h3><pre><code>首先，我们放上一张图片，展示下成果的大体样子：
+![首页展示图](MyBlog前端开发_files/1.jpg)
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+当然，由于页面大小原因，这里只能截图这么多，感兴趣的也可以去
+[MyBlog演示地址](https://silence-moon.github.io/hsilence.github.io-blog/index.html)
+看看。
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+反正大体上也就是三块：导航、中间内容、底部
 
+而基本上所有的代码实现都是嵌套在</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui container"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code>这样一个div里面。</code></pre><h4 id="3-3-1-导航"><a href="#3-3-1-导航" class="headerlink" title="3.3.1 导航"></a>3.3.1 导航</h4><pre><code>导航也可以分成3个部分，即左侧logo、菜单、右侧的搜索
+这里嵌套了三层div来做菜单，而搜索又套了一个div来实现。</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 导航 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 使用UI组件，使用inverted反转默认颜色，attached去圆角，segment表明这是一个片段，自定义上下内边距 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"ui inverted attached segment m-padding-tb-mini"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui container"</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 为了适应移动端，这里需要加一个属性stackable,表示可堆叠 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui inverted secondary stackable menu"</span>&gt;</span></span><br><span class="line">			<span class="comment">&lt;!-- 添加logo，导航菜单 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"ui teal header item"</span>&gt;</span>Blog<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"index.html"</span> <span class="attr">class</span>=<span class="string">"active menu-item item m-mobile-hide"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"home icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"types.html"</span> <span class="attr">class</span>=<span class="string">"menu-item item m-mobile-hide"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"idea icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>分类<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"tags.html"</span> <span class="attr">class</span>=<span class="string">"menu-item item m-mobile-hide"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"tags icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>标签<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"archives.html"</span> <span class="attr">class</span>=<span class="string">"menu-item item m-mobile-hide"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"clone icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>归档<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"menu-item item m-mobile-hide"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"info icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>关于我<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			</span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right menu-item item m-mobile-hide"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui icon input"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"Search..."</span>/&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"search link icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 设置手机端响应时显示个菜单图标 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ui menu toggle black icon button m-right-top m-mobile-show"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"sidebar icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-2-中间内容"><a href="#3-3-2-中间内容" class="headerlink" title="3.3.2 中间内容"></a>3.3.2 中间内容</h4><pre><code>中间内容从大的方面来说，可以分为左右2个部分，在下面的代码中，“文章内容部分”就是
+左侧，而右侧卡片区域则是右侧。
+
+就左侧区域来说，又可以分成头（博客、共**篇）、中（文章列表）、下（上一页、下一页）
+
+中间的文章列表又可以分成左侧的文章标题、内容、右侧的图片和底部的一些信息，如头像、
+作者、时间、浏览次数、分类等等。
+
+右侧卡片主要有四项：分类、标签、最新推荐、扫码关注
+其中，前三个的框架是一样的，都可以分成上下2个部分。</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 中间内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"m-container m-padding-tb-big"</span> <span class="attr">id</span>=<span class="string">"waypoint"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui container"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui stackable grid"</span>&gt;</span></span><br><span class="line">			<span class="comment">&lt;!-- 文章内容部分 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"eleven wide column"</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 头部：使用attached让上下连到一起 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui top attached segment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 文章列表：使用attached让上下连到一起 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui attached segment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 底部：上一页、下一页 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui bottom attached segment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			</span><br><span class="line">			<span class="comment">&lt;!-- 右侧卡片 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"five wide column"</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 分类卡片 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui segments"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 标签卡片 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui segments m-margin-top-large"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 最新推荐卡片 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui segments m-margin-top-large"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">&lt;!-- 二维码 --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">"ui horizontal divider header m-margin-top-large"</span>&gt;</span>扫码关注我<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 设置居中格式centered，宽度为11em --&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui centered card"</span> <span class="attr">style</span>=<span class="string">"width: 11em;"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./static/images/MyBlog.png"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"ui rounded image"</span> &gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-3-底部栏"><a href="#3-3-3-底部栏" class="headerlink" title="3.3.3 底部栏"></a>3.3.3 底部栏</h4><pre><code>底部栏可以分成上下2块，上侧又分成4格（注：一个grid总共有16column，可根据情况自行选择大小）
+![底部栏展示](MyBlog前端开发_files/1.jpg)</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 底部栏 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span> <span class="attr">class</span>=<span class="string">"ui inverted vertical segment m-padding-tb-massive"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui center aligned container"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui inverted divided stackable grid"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"three wide column"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"three wide column"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"three wide column"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"seven wide column"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui inverted section divider"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"m-text-thin m-text-spaced m-opacity-tiny"</span>&gt;</span>Copyright 2020 silence Designed by silence<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="四、代码地址"><a href="#四、代码地址" class="headerlink" title="四、代码地址"></a>四、代码地址</h2><pre><code>[前端代码地址](https://github.com/silence-moon/hsilence.github.io-blog)</code></pre>
             </div>
             <hr/>
 
@@ -496,7 +553,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://silence-moon.github.io/2020/06/18/hello-world/">http://silence-moon.github.io/2020/06/18/hello-world/</a>
+                    <a href="http://silence-moon.github.io/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">http://silence-moon.github.io/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,9 +756,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/20/MyBlog%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">
                     <div class="card-image">
@@ -724,9 +782,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -735,6 +793,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -742,7 +801,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/06/18/hello-world/">
@@ -772,7 +831,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

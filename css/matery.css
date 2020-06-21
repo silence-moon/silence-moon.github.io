@@ -4,6 +4,10 @@
     .container {
         width: 95%;
     }
+	/*修改博客标题的字体大小*/
+	header .brand-logo .logo-span {
+		font-size: 1.5rem;
+	}
 }
 
 /*中等屏幕下(平板类)的样式*/

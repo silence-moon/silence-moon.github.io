@@ -1,0 +1,1909 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="MyBlog前端开发2, silence">
+    <meta name="description" content="This is a blog owned by silence !">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>MyBlog前端开发2 | silence</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">silence</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">silence</div>
+        <div class="logo-desc">
+            
+            This is a blog owned by silence !
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/silence-moon/silence-moon.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #bf307f;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/silence-moon/silence-moon.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">MyBlog前端开发2</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">前端开发</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/">
+                                <span class="chip bg-color">博客项目</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E3%80%81%E5%BC%80%E5%8F%91/" class="post-category">
+                                学习、开发
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-06-21
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.2k
+                </div>
+                
+				
+				<div class="info-break-policy">
+				    
+				        <i class="fa fa-pencil"></i> 作者: silence
+				     
+				</div>
+				
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    32 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="MyBlog个人博客前端开发（二）"><a href="#MyBlog个人博客前端开发（二）" class="headerlink" title="MyBlog个人博客前端开发（二）"></a>MyBlog个人博客前端开发（二）</h1><p>作者：silence</p>
+<p>编写日期：2020-06-20</p>
+<p>分类：学习记录</p>
+<p>项目演示地址：<a href="https://silence-moon.github.io/hsilence.github.io-blog/index.html">MyBlog演示地址</a></p>
+<hr>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>昨天我们介绍了个人博客开发的背景、系统叙述、功能介绍以及首页的开发，我们主要说了如何做，至于具体的代码<br>部分并没有说，今天我们就来讲一讲。</p>
+<h2 id="二、正文"><a href="#二、正文" class="headerlink" title="二、正文"></a>二、正文</h2><h3 id="2-1-导航栏"><a href="#2-1-导航栏" class="headerlink" title="2.1 导航栏"></a>2.1 导航栏</h3><p>整个导航的代码如下：</p>
+<pre><code class="html">&lt;!-- 导航 --&gt;
+&lt;!-- 使用UI组件，使用inverted反转默认颜色，attached去圆角，segment表明这是一个片段，自定义上下内边距 --&gt;
+&lt;nav id=&quot;nav&quot; class=&quot;ui inverted attached segment m-padding-tb-mini&quot;&gt;
+    &lt;div class=&quot;ui container&quot;&gt;
+        &lt;!-- 为了适应移动端，这里需要加一个属性stackable,表示可堆叠 --&gt;
+        &lt;div class=&quot;ui inverted secondary stackable menu&quot;&gt;
+            &lt;!-- 添加logo，导航菜单 --&gt;
+            &lt;h2 class=&quot;ui teal header item&quot;&gt;Blog&lt;/h2&gt;
+            &lt;a href=&quot;index.html&quot; class=&quot;menu-item item m-mobile-hide&quot;&gt;&lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;首页&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;menu-item item m-mobile-hide&quot;&gt;&lt;i class=&quot;idea icon&quot;&gt;&lt;/i&gt;分类&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;menu-item item m-mobile-hide&quot;&gt;&lt;i class=&quot;tags icon&quot;&gt;&lt;/i&gt;标签&lt;/a&gt;
+            &lt;a href=&quot;# &quot; class=&quot;menu-item item m-mobile-hide&quot;&gt;&lt;i class=&quot;clone icon&quot;&gt;&lt;/i&gt;归档&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;menu-item item m-mobile-hide&quot;&gt;&lt;i class=&quot;info icon&quot;&gt;&lt;/i&gt;关于我&lt;/a&gt;
+
+            &lt;div class=&quot;right menu-item item m-mobile-hide&quot;&gt;
+                &lt;div class=&quot;ui icon input&quot;&gt;
+                    &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot;/&gt;
+                    &lt;i class=&quot;search link icon&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 设置手机端响应时显示个菜单图标 --&gt;
+    &lt;a href=&quot;#&quot; class=&quot;ui menu toggle black icon button m-right-top m-mobile-show&quot;&gt;
+        &lt;i class=&quot;sidebar icon&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+<p>在这里我们使用了semantic ui，这里有2种方法可以进行引用：</p>
+<ul>
+<li>(1).下载插件到本地：<ul>
+<li>具体方法见<a href="https://semantic-ui.com/introduction/getting-started.html" target="_blank" rel="noopener">semantic ui</a></li>
+</ul>
+</li>
+<li>(2).使用cdn直接引用：<ul>
+<li>引用下面的script脚本即可</li>
+</ul>
+</li>
+</ul>
+<pre><code class="CSS">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css&quot;&gt;</code></pre>
+<pre><code class="JavaScript">&lt;script src=&quot;https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>对上述代码拆分一下，我们可以发现其可以分成如下几个部分：</p>
+<p>(1).外部盒子</p>
+<pre><code class="HTML">&lt;nav id=&quot;nav&quot; class=&quot;ui inverted attached segment m-padding-tb-mini&quot;&gt;
+    &lt;div class=&quot;ui container&quot;&gt;
+
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+<p>这个外部盒子说白了就是一个容器，嗯，这个nav标签暂时可以加，也可以不加，只是成品上面会用得着，<br>就先加着吧。 class里面的 ui 说明这里使用的是 semantic ui 的 ui 组件，然后，这里为了简便，<br>直接使用 inverted 将背景设置成黑色（注：默认是白色，而 inverted 是置反的意思），<br>attached 一般的用法是将上下连在一起，如下图所示：<br><img src="/2020/%E9%A6%96%E9%A1%B5%E6%9E%B6%E6%9E%84.png" alt="首页架构"><br>这里的“文章列表”框里，顶部的“博客”、“共**篇”和下方的文章内容是连在一起的，就是使用的attached这个<br>属性，segment说明这是一个段，m-padding-tb-mini 是在me.css中自定义的一个样式，顾名思义，就是<br>自定义的内边距，关于上下的（t：top；b：bottom）的一个mini值，当然，除了mini外，还有tiny、small、<br>normal(不写即为normal)、large、big、huge、massive等等几个级别，嗯，反正就是一组样式了，给自己<br>定义好一个规则之后，以后不就可以偷点懒，直接拿来用了嘛！</p>
+<p>(2).内部的菜单和搜索框</p>
+<pre><code class="HTML">&lt;!-- 为了适应移动端，这里需要加一个属性stackable,表示可堆叠 --&gt;
+&lt;div class=&quot;ui inverted secondary stackable menu&quot;&gt;
+    &lt;!-- 菜单部分 --&gt;
+
+    &lt;!-- 搜索 --&gt;
+    &lt;div class=&quot;right menu-item item m-mobile-hide&quot;&gt;
+        &lt;div class=&quot;ui icon input&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot;/&gt;
+            &lt;i class=&quot;search link icon&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>这里的 secondary 是一个颜色，stackable是表示可堆叠的意思，是为了适应移动端而写的，<br>menu说明这是一个菜单，下面的menu-item 表示这是一个菜单子项，是一个常识写法，为了让<br>搜索框向右浮动，这里写了right，嗯，这就是使用组件的好处了，如果是纯HTML+css，就应该<br>要加一个float了，然后是一个input输入框，为了在里面显示个搜索的小图标，这里写了search link icon。</p>
+<h3 id="2-2-底部栏"><a href="#2-2-底部栏" class="headerlink" title="2.2 底部栏"></a>2.2 底部栏</h3><p>先放代码：</p>
+<pre><code class="HTML">&lt;footer class=&quot;ui inverted vertical segment m-padding-tb-massive&quot;&gt;
+    &lt;div class=&quot;ui center aligned container&quot;&gt;
+        &lt;div class=&quot;ui inverted divided stackable grid&quot;&gt;
+            &lt;div class=&quot;three wide column&quot;&gt;
+                &lt;h4 class=&quot;ui inverted header&quot;&gt;扫码关注&lt;/h4&gt;
+                &lt;div class=&quot;ui inverted link list&quot;&gt;
+                    &lt;div class=&quot;item&quot;&gt;
+                        &lt;!-- 图片设置为圆角，并使用内联样式控制图片大小 --&gt;
+                        &lt;img src=&quot;img/MyBlog.png&quot; class=&quot;ui rounded image m-div-mini&quot; alt=&quot;&quot;&gt;
+                    &lt;/div&gt;                                
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;three wide column&quot;&gt;
+                &lt;h4 class=&quot;ui inverted header&quot;&gt;最新博客&lt;/h4&gt;
+                &lt;div class=&quot;ui inverted link list&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;item&quot;&gt;用户故事(User Story)&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;three wide column&quot;&gt;
+                &lt;h4 class=&quot;ui inverted header&quot;&gt;联系我&lt;/h4&gt;
+                &lt;div class=&quot;ui inverted link list&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;item&quot;&gt;Email:406685901@qq.com&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;seven wide column&quot;&gt;
+                &lt;h4 class=&quot;ui inverted header&quot;&gt;Blog&lt;/h4&gt;
+                &lt;p class=&quot;m-text-thin m-text-spaced m-opacity-mini&quot;&gt;这是我的个人博客，会分享关于编程、思考等等相关的任何内容，希望可以对来到此站的朋友有所帮助！&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;ui inverted section divider&quot;&gt;&lt;/div&gt;
+        &lt;p class=&quot;m-text-thin m-text-spaced m-opacity-tiny&quot;&gt;Copyright 2020 silence Designed by silence&lt;/p&gt;        
+    &lt;/div&gt;
+&lt;/footer&gt;    </code></pre>
+<p>然后我们来拆一下看看。外面还是个container容器，老套路，只是使用了center aligned增加了内容居中。<br>然后呢，使用了一个grid将上方分成四个分别占有3、3、3、7份的部分，分别放置图片和内容。</p>
+<pre><code class="HTML">&lt;div class=&quot;three wide column&quot;&gt;
+    &lt;h4 class=&quot;ui inverted header&quot;&gt;扫码关注&lt;/h4&gt;
+    &lt;div class=&quot;ui inverted link list&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+            &lt;!-- 图片设置为圆角，并使用内联样式控制图片大小 --&gt;
+            &lt;img src=&quot;img/MyBlog.png&quot; class=&quot;ui rounded image m-div-mini&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;                                
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>图片的话是是list中的一项（item），是一个圆角rounded image图片，如果还有其他项，可以写下去。</p>
+<p>就比如说第二个吧，“最新博客”下面，继续放上a标签写多个。</p>
+<h3 id="2-3-右侧工具栏"><a href="#2-3-右侧工具栏" class="headerlink" title="2.3 右侧工具栏"></a>2.3 右侧工具栏</h3><pre><code class="HTML">&lt;!-- 右侧工具栏 --&gt;
+&lt;div class=&quot;&quot;&gt;
+    &lt;!-- 目录、返回顶部等等右侧小工具 --&gt;
+    &lt;div id=&quot;toolBar&quot; class=&quot; m-position-fixed  m-position-rb&quot; style=&quot;display: none;&quot;&gt;
+        &lt;div class=&quot;ui vertical icon buttons&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;ui toc teal button&quot;&gt;目录&lt;/button&gt;
+            &lt;!-- &lt;a href=&quot;#comment-container&quot; class=&quot;ui teal button&quot;&gt;留言&lt;/a&gt; --&gt;
+            &lt;button class=&quot;ui addr_qrcode icon button&quot; title=&quot;点我生成二维码,在手机上查看&quot;&gt;&lt;i class=&quot;qrcode icon&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;!-- 返回顶部图标 --&gt;
+            &lt;div id=&quot;toTop-Btn&quot; class=&quot;ui button&quot; title=&quot;返回顶部&quot;&gt;&lt;i class=&quot;chevron up icon&quot; style=&quot;margin: auto !important;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 目录存放位置 --&gt;
+    &lt;div class=&quot;ui toc-container flowing popup transition hidden&quot; style=&quot;width: 15.625rem !important;&quot;&gt;
+        &lt;ol class=&quot;js-toc&quot;&gt;
+
+        &lt;/ol&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 二维码存放位置 --&gt;
+    &lt;div id=&quot;qrcode&quot; class=&quot;ui QRcode flowing popup transition hidden&quot; style=&quot;width: 130px !important;&quot;&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>当然，这里就需要配置其他东西了，比如说生成二维码，你需要引入qrcode，生成目录的话需要引用tocbot等等。<br>虽然这里并不需要目录，但是为了统一性还是写上吧，而且在博客详情页面也还是需要用上的。</p>
+<pre><code class="CSS">&lt;!-- 引入tocbot.css实现自动生成目录 --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;lib/tocbot/tocbot.css&quot;/&gt;</code></pre>
+<pre><code class="JavaScript">&lt;!-- 引用tocbot.js实现自动生成目录 --&gt;
+        &lt;script src=&quot;lib/tocbot/tocbot.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- 引用qrcode.js实现自动生成当前地址的二维码 --&gt;
+        &lt;script src=&quot;lib/qrcode/qrcode.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- 引用jquery.waypoints.min.js实现滚动侦测 --&gt;
+        &lt;script src=&quot;lib/waypoints/jquery.waypoints.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<pre><code class="JavaScript">&lt;script&gt;
+    // 手机端点击menu按钮时显示菜单
+    $(&#39;.menu.toggle&#39;).click(function(){
+        // 点击按钮时检测menu-item内是否有m-mobile-hide属性，有则删除，没有则添上
+        $(&#39;.menu-item&#39;).toggleClass(&#39;m-mobile-hide&#39;);
+    });
+    //tocbot自动生成目录
+    //初始化tocbot
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: &#39;.js-toc&#39;,
+      // Where to grab the headings to build the table of contents.
+      contentSelector: &#39;.js-toc-content&#39;,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: &#39;h1, h2, h3&#39;,
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: true,
+    });
+    //点击按钮时在左侧弹出目录
+    $(&#39;.toc.button&#39;).popup({
+        popup : $(&#39;.toc-container.popup&#39;),
+        on : &#39;click&#39;,
+        position : &#39;left center&#39;
+    });
+    //二维码图标
+    $(&#39;.addr_qrcode&#39;).popup({
+        popup : $(&#39;.QRcode.popup&#39;),
+        on : &#39;click&#39;, //其实默认就是hover
+        position : &#39;left center&#39;
+    });
+    //根据text内容自动生成二维码
+    var qrcode = new QRCode(&quot;qrcode&quot;, {
+        text: &quot;https://silence-moon.github.io/&quot;,
+        width: 126,
+        height: 126,
+        colorDark : &quot;#000000&quot;,
+        colorLight : &quot;#ffffff&quot;,
+        correctLevel : QRCode.CorrectLevel.H
+    });
+    //返回顶部
+    $(&#39;#toTop-Btn&#39;).click(function(){
+        $(window).scrollTo(0,500);//grgs:(返回位置，返回过程所用时间)
+    });
+    // 导航栏显示
+    var waypoint = new Waypoint({
+        element: document.getElementById(&#39;waypoint&#39;),
+        handler: function(direction) {
+            if (direction == &#39;down&#39;) {
+                $(&#39;#toolBar&#39;).show(500);
+                $(&#39;#nav&#39;).show(500);
+            } else {
+                $(&#39;#toolBar&#39;).hide(500);                
+            }
+            console.log(&#39;Scrolled to waypoint!  &#39; + direction);
+        }
+    });
+&lt;/script&gt;</code></pre>
+<h3 id="2-3-中间内容"><a href="#2-3-中间内容" class="headerlink" title="2.3 中间内容"></a>2.3 中间内容</h3><p>这里主要是分成左右两块：左侧的内容列表和右侧的卡片组<br>嗯，这里使用了animated bounceIn的动画，如果想换样式的，<br>可以去这个网站<a href="https://www.dowebok.com/demo/2014/98/" target="_blank" rel="noopener">Animate.css动画演示</a><br>看看，选择一个自己喜欢的样式。</p>
+<pre><code class="HTML">&lt;!-- 中间内容:animated bounceIn为显示的动画 --&gt;
+&lt;div id=&quot;waypoint&quot; class=&quot;m-container-small teal m-padding-tb-big animated bounceIn&quot;&gt;
+    &lt;div class=&quot;ui container&quot;&gt;
+        &lt;!-- 分列进行样式排版 --&gt;
+        &lt;div class=&quot;ui stackable grid&quot;&gt;
+            &lt;!-- 左侧：注意这里写的时候 eleven wide column 中间不要有多余的空格或字符--&gt;
+            &lt;div class=&quot;eleven wide column&quot;&gt;
+                &lt;!-- header --&gt;
+                &lt;div class=&quot;ui top attached segment&quot;&gt;
+                    &lt;div class=&quot;ui middle aligned two column grid&quot;&gt;
+                        &lt;div class=&quot;column&quot;&gt;
+                            &lt;h3 class=&quot;ui teal header&quot;&gt;博客&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;right aligned column&quot;&gt;
+                            共 &lt;h2 class=&quot;ui orange header m-inline-blok m-text-thin&quot;&gt; 14 &lt;/h2&gt; 篇
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- content list --&gt;
+                &lt;div class=&quot;ui attached segment&quot;&gt;
+                    &lt;div class=&quot;ui padding vertical segment m-padding-tb-big&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- footer：上一页、下一页 --&gt;
+                &lt;div class=&quot;ui bottom attached segment&quot;&gt;
+                        &lt;div class=&quot;ui middle aligned two column grid&quot;&gt;
+                            &lt;div class=&quot;column&quot;&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;ui mini teal basic button&quot;&gt;上一页&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;right aligned column&quot;&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;ui mini teal basic button&quot;&gt;下一页&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;                    
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;!-- 右侧卡片 --&gt;
+            &lt;div class=&quot;five wide column&quot;&gt;
+                &lt;!-- 卡片样式：这里写2个意思一下 --&gt;
+                &lt;!-- 分类卡片 --&gt;
+                &lt;div class=&quot;ui segments&quot;&gt;
+                    &lt;div class=&quot;ui secondary segment&quot;&gt;
+                        &lt;div class=&quot;ui two column grid&quot;&gt;
+                            &lt;div class=&quot;column&quot;&gt;
+                                &lt;i class=&quot;idea icon&quot;&gt;&lt;/i&gt;分类
+                            &lt;/div&gt;
+                            &lt;div class=&quot;right aligned column&quot;&gt;
+                                &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;more &lt;i class=&quot;angle double right icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;ui teal segment&quot;&gt;
+                        &lt;!-- fluid:填充 --&gt;
+                        &lt;div class=&quot;ui fluid vertical menu&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;item&quot;&gt;
+                                学习日志
+                                &lt;!-- 设置数量样式 --&gt;
+                                &lt;div class=&quot;ui teal basic left pointing label&quot;&gt;13&lt;/div&gt;
+                            &lt;/a&gt;
+                            &lt;!-- 需要可以再行添加 --&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- 标签卡片 --&gt;
+                &lt;div class=&quot;ui segments m-margin-top-large&quot;&gt;
+                    &lt;div class=&quot;ui secondary segment&quot;&gt;
+                        &lt;div class=&quot;ui two column grid&quot;&gt;
+                            &lt;div class=&quot;column&quot;&gt;
+                                &lt;i class=&quot;tags icon&quot;&gt;&lt;/i&gt;标签
+                            &lt;/div&gt;
+                            &lt;div class=&quot;right aligned column&quot;&gt;
+                                &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;more &lt;i class=&quot;angle double right icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;ui teal segment&quot;&gt;
+                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot; class=&quot;ui teal basic left pointing label m-margin-tb-tiny&quot;&gt;
+                            方法论 &lt;div class=&quot;detail&quot;&gt;23&lt;/div&gt;
+                        &lt;/a&gt;                                
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>样式如上，我进行了简化处理。</p>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>大概的分析就如上了，具体的还是需要去实践练习的。多写两遍后感觉就没什么可讲的了。<br>其实今天再准备的时候我还特地跑到 semantic ui 这个网站上去瞅了一遍，准备做一份<br>简要的说明，写着写着，又去将这两天写的一个页面抽取出来做了一个模板，真是够乱了。<br>以后还是分享分享自己遇到的一些问题和其他内容吧，实战的过程分析真的是很麻烦啊。</p>
+<h2 id="四、附录"><a href="#四、附录" class="headerlink" title="四、附录"></a>四、附录</h2><p>这里放上做个一个小模板，可以简单看看。<br>至于自定义的样式me.css,我把它放到我的GitHub上了，<br>可以去<a href="https://github.com/silence-moon/hsilence.github.io-blog" target="_blank" rel="noopener">前端代码地址</a>上找到对应的文件去自行下载。</p>
+<pre><code class="HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;一个html页面的基本框架&lt;/title&gt;
+        &lt;!-- 使用cnd引用semantic.min.css样式 --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css&quot;&gt;
+        &lt;!-- 自定义样式 --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/me.css&quot;/&gt;
+        &lt;!-- 引入typo.css对内容进行排版 --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/typo.css&quot;/&gt;
+        &lt;!-- 引入animate.css添加动画 --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/animate.css&quot;/&gt;
+        &lt;!-- 引入prism.css实现语法高亮 --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;lib/prism/prism.css&quot;/&gt;
+        &lt;!-- 引入tocbot.css实现自动生成目录 --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;lib/tocbot/tocbot.css&quot;/&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 导航 --&gt;
+        &lt;!-- 使用UI组件，使用inverted反转默认颜色，attached去圆角，segment表明这是一个片段，自定义上下内边距 --&gt;
+        &lt;nav id=&quot;nav&quot; class=&quot;ui inverted attached segment m-padding-tb-mini&quot;&gt;
+            &lt;div class=&quot;ui container&quot;&gt;
+                &lt;!-- 为了适应移动端，这里需要加一个属性stackable,表示可堆叠 --&gt;
+                &lt;div class=&quot;ui inverted secondary stackable menu&quot;&gt;
+                    &lt;!-- 添加logo，导航菜单 --&gt;
+                    &lt;h2 class=&quot;ui teal header item&quot;&gt;logo&lt;/h2&gt;
+                    &lt;a href=&quot;index.html&quot; class=&quot;menu-item item m-mobile-hide&quot;&gt;&lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;首页&lt;/a&gt;
+
+                    &lt;div class=&quot;right menu-item item m-mobile-hide&quot;&gt;
+                        &lt;div class=&quot;ui icon input&quot;&gt;
+                            &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot;/&gt;
+                            &lt;i class=&quot;search link icon&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- 设置手机端响应时显示个菜单图标 --&gt;
+            &lt;a href=&quot;#&quot; class=&quot;ui menu toggle black icon button m-right-top m-mobile-show&quot;&gt;
+                &lt;i class=&quot;sidebar icon&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/nav&gt;
+
+        &lt;!-- 中间内容样式1:animated bounceIn为显示的动画 --&gt;
+        &lt;div id=&quot;waypoint&quot; class=&quot;m-container-small teal m-padding-tb-big animated bounceIn&quot;&gt;
+            &lt;div class=&quot;ui container&quot;&gt;
+                &lt;!-- 分列进行样式排版 --&gt;
+                &lt;div class=&quot;ui stackable grid&quot;&gt;
+                    &lt;!-- 左侧：注意这里写的时候 eleven wide column 中间不要有多余的空格或字符--&gt;
+                    &lt;div class=&quot;eleven wide column&quot;&gt;
+                        &lt;!-- header --&gt;
+                        &lt;div class=&quot;ui top attached segment&quot;&gt;
+                            &lt;div class=&quot;ui middle aligned two column grid&quot;&gt;
+                                &lt;div class=&quot;column&quot;&gt;
+                                    &lt;h3 class=&quot;ui teal header&quot;&gt;博客&lt;/h3&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;right aligned column&quot;&gt;
+                                    共 &lt;h2 class=&quot;ui orange header m-inline-blok m-text-thin&quot;&gt; 14 &lt;/h2&gt; 篇
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- content list --&gt;
+                        &lt;div class=&quot;ui attached segment&quot;&gt;
+                            &lt;div class=&quot;ui padding vertical segment m-padding-tb-big&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- footer：上一页、下一页 --&gt;
+                        &lt;div class=&quot;ui bottom attached segment&quot;&gt;
+                                &lt;div class=&quot;ui middle aligned two column grid&quot;&gt;
+                                    &lt;div class=&quot;column&quot;&gt;
+                                        &lt;a href=&quot;#&quot; class=&quot;ui mini teal basic button&quot;&gt;上一页&lt;/a&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;right aligned column&quot;&gt;
+                                        &lt;a href=&quot;#&quot; class=&quot;ui mini teal basic button&quot;&gt;下一页&lt;/a&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;                    
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;!-- 右侧卡片 --&gt;
+                    &lt;div class=&quot;five wide column&quot;&gt;
+                        &lt;!-- 卡片样式：这里写2个意思一下 --&gt;
+                        &lt;!-- 分类卡片 --&gt;
+                        &lt;div class=&quot;ui segments&quot;&gt;
+                            &lt;div class=&quot;ui secondary segment&quot;&gt;
+                                &lt;div class=&quot;ui two column grid&quot;&gt;
+                                    &lt;div class=&quot;column&quot;&gt;
+                                        &lt;i class=&quot;idea icon&quot;&gt;&lt;/i&gt;分类
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;right aligned column&quot;&gt;
+                                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;more &lt;i class=&quot;angle double right icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;ui teal segment&quot;&gt;
+                                &lt;!-- fluid:填充 --&gt;
+                                &lt;div class=&quot;ui fluid vertical menu&quot;&gt;
+                                    &lt;a href=&quot;#&quot; class=&quot;item&quot;&gt;
+                                        学习日志
+                                        &lt;!-- 设置数量样式 --&gt;
+                                        &lt;div class=&quot;ui teal basic left pointing label&quot;&gt;13&lt;/div&gt;
+                                    &lt;/a&gt;
+                                    &lt;!-- 需要可以再行添加 --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- 标签卡片 --&gt;
+                        &lt;div class=&quot;ui segments m-margin-top-large&quot;&gt;
+                            &lt;div class=&quot;ui secondary segment&quot;&gt;
+                                &lt;div class=&quot;ui two column grid&quot;&gt;
+                                    &lt;div class=&quot;column&quot;&gt;
+                                        &lt;i class=&quot;tags icon&quot;&gt;&lt;/i&gt;标签
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;right aligned column&quot;&gt;
+                                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;more &lt;i class=&quot;angle double right icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;ui teal segment&quot;&gt;
+                                &lt;a href=&quot;#&quot; target=&quot;_blank&quot; class=&quot;ui teal basic left pointing label m-margin-tb-tiny&quot;&gt;
+                                    方法论 &lt;div class=&quot;detail&quot;&gt;23&lt;/div&gt;
+                                &lt;/a&gt;                                
+
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;hr &gt;
+        &lt;p&gt;这里是上下2个中间内容样式的分割线&lt;/p&gt;
+        &lt;hr &gt;
+        &lt;!-- 中间内容样式2:animated bounceIn为显示的动画 --&gt;
+        &lt;div id=&quot;&quot; class=&quot;m-container-small teal m-padding-tb-big animated bounceIn&quot;&gt;
+            &lt;div class=&quot;ui container&quot;&gt;
+                &lt;p&gt;使用本文件时请引用me.css样式&lt;/p&gt;
+                &lt;p&gt;同时，也需要引入本文件下的lib库&lt;/p&gt;
+
+
+                &lt;h2 id=&quot;section1-3&quot;&gt;下面看一下prism插件的代码高亮部分的显示情况：&lt;/h2&gt;                
+                &lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;
+                &lt;p&gt;请先引入prism.css样式&lt;/p&gt;
+                &lt;p&gt;若要实现内容排版还请引入typo.css样式&lt;/p&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 右侧工具栏 --&gt;
+        &lt;div class=&quot;&quot;&gt;
+            &lt;!-- 目录、返回顶部等等右侧小工具 --&gt;
+            &lt;div id=&quot;toolBar&quot; class=&quot; m-position-fixed  m-position-rb&quot; style=&quot;display: none;&quot;&gt;
+                &lt;div class=&quot;ui vertical icon buttons&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;ui toc teal button&quot;&gt;目录&lt;/button&gt;
+                    &lt;!-- &lt;a href=&quot;#comment-container&quot; class=&quot;ui teal button&quot;&gt;留言&lt;/a&gt; --&gt;
+                    &lt;button class=&quot;ui addr_qrcode icon button&quot; title=&quot;点我生成二维码,在手机上查看&quot;&gt;&lt;i class=&quot;qrcode icon&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;!-- 返回顶部图标 --&gt;
+                    &lt;div id=&quot;toTop-Btn&quot; class=&quot;ui button&quot; title=&quot;返回顶部&quot;&gt;&lt;i class=&quot;chevron up icon&quot; style=&quot;margin: auto !important;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 目录存放位置 --&gt;
+            &lt;div class=&quot;ui toc-container flowing popup transition hidden&quot; style=&quot;width: 15.625rem !important;&quot;&gt;
+                &lt;ol class=&quot;js-toc&quot;&gt;
+
+                &lt;/ol&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 二维码存放位置 --&gt;
+            &lt;div id=&quot;qrcode&quot; class=&quot;ui QRcode flowing popup transition hidden&quot; style=&quot;width: 130px !important;&quot;&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;    
+
+        &lt;!-- 底部栏 --&gt;
+        &lt;footer class=&quot;ui inverted vertical segment m-padding-tb-massive&quot;&gt;
+            &lt;div class=&quot;ui center aligned container&quot;&gt;
+                &lt;div class=&quot;ui inverted divided stackable grid&quot;&gt;
+                    &lt;div class=&quot;three wide column&quot;&gt;
+                        &lt;h4 class=&quot;ui inverted header&quot;&gt;扫码关注&lt;/h4&gt;
+                        &lt;div class=&quot;ui inverted link list&quot;&gt;
+                            &lt;div class=&quot;item&quot;&gt;
+                                &lt;!-- 图片设置为圆角，并使用内联样式控制图片大小 --&gt;
+                                &lt;img src=&quot;img/MyBlog.png&quot; class=&quot;ui rounded image m-div-mini&quot; alt=&quot;&quot;&gt;
+                            &lt;/div&gt;                                
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;three wide column&quot;&gt;
+                        &lt;h4 class=&quot;ui inverted header&quot;&gt;最新博客&lt;/h4&gt;
+                        &lt;div class=&quot;ui inverted link list&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;item&quot;&gt;用户故事(User Story)&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;three wide column&quot;&gt;
+                        &lt;h4 class=&quot;ui inverted header&quot;&gt;联系我&lt;/h4&gt;
+                        &lt;div class=&quot;ui inverted link list&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;item&quot;&gt;Email:406685901@qq.com&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;seven wide column&quot;&gt;
+                        &lt;h4 class=&quot;ui inverted header&quot;&gt;Blog&lt;/h4&gt;
+                        &lt;p class=&quot;m-text-thin m-text-spaced m-opacity-mini&quot;&gt;这是我的个人博客，会分享关于编程、思考等等相关的任何内容，希望可以对来到此站的朋友有所帮助！&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;ui inverted section divider&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;m-text-thin m-text-spaced m-opacity-tiny&quot;&gt;Copyright 2020 silence Designed by silence&lt;/p&gt;        
+            &lt;/div&gt;
+        &lt;/footer&gt;
+
+
+        &lt;!-- cdn引入 jquery.min.js 和semantic.min.js --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- 引用prism.js实现代码高亮 --&gt;
+        &lt;script src=&quot;lib/prism/prism.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- 引用tocbot.js实现自动生成目录 --&gt;
+        &lt;script src=&quot;lib/tocbot/tocbot.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- 引用qrcode.js实现自动生成当前地址的二维码 --&gt;
+        &lt;script src=&quot;lib/qrcode/qrcode.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- 引用jquery.waypoints.min.js实现滚动侦测 --&gt;
+        &lt;script src=&quot;lib/waypoints/jquery.waypoints.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;script&gt;
+            // 手机端点击menu按钮时显示菜单
+            $(&#39;.menu.toggle&#39;).click(function(){
+                // 点击按钮时检测menu-item内是否有m-mobile-hide属性，有则删除，没有则添上
+                $(&#39;.menu-item&#39;).toggleClass(&#39;m-mobile-hide&#39;);
+            });
+            //tocbot自动生成目录
+            //初始化tocbot
+            tocbot.init({
+              // Where to render the table of contents.
+              tocSelector: &#39;.js-toc&#39;,
+              // Where to grab the headings to build the table of contents.
+              contentSelector: &#39;.js-toc-content&#39;,
+              // Which headings to grab inside of the contentSelector element.
+              headingSelector: &#39;h1, h2, h3&#39;,
+              // For headings inside relative or absolute positioned containers within content.
+              hasInnerContainers: true,
+            });
+            //点击按钮时在左侧弹出目录
+            $(&#39;.toc.button&#39;).popup({
+                popup : $(&#39;.toc-container.popup&#39;),
+                on : &#39;click&#39;,
+                position : &#39;left center&#39;
+            });
+            //二维码图标
+            $(&#39;.addr_qrcode&#39;).popup({
+                popup : $(&#39;.QRcode.popup&#39;),
+                on : &#39;click&#39;, //其实默认就是hover
+                position : &#39;left center&#39;
+            });
+            //根据text内容自动生成二维码
+            var qrcode = new QRCode(&quot;qrcode&quot;, {
+                // text: &quot;http://jindo.dev.naver.com/collie&quot;,http://127.0.0.1:8848/SpringBoot_blog/blog.html
+                text: &quot;https://silence-moon.github.io/&quot;,
+                width: 126,
+                height: 126,
+                colorDark : &quot;#000000&quot;,
+                colorLight : &quot;#ffffff&quot;,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+            //返回顶部
+            $(&#39;#toTop-Btn&#39;).click(function(){
+                $(window).scrollTo(0,500);//grgs:(返回位置，返回过程所用时间)
+            });
+            // 导航栏显示
+            var waypoint = new Waypoint({
+                element: document.getElementById(&#39;waypoint&#39;),
+                handler: function(direction) {
+                    if (direction == &#39;down&#39;) {
+                        $(&#39;#toolBar&#39;).show(500);
+                        $(&#39;#nav&#39;).show(500);
+                    } else {
+                        $(&#39;#toolBar&#39;).hide(500);
+                        // $(&#39;#nav&#39;).hide(500);                    
+                    }
+                    console.log(&#39;Scrolled to waypoint!  &#39; + direction);
+                }
+            });
+        &lt;/script&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">silence</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://silence-moon.github.io/2020/062137065.html">http://silence-moon.github.io/2020/062137065.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">silence</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">前端开发</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/">
+                                    <span class="chip bg-color">博客项目</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <!-- <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li> -->
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <!-- <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div> -->
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '6e237847249f94cf5407',
+        clientSecret: 'e1ab731e27b73125202ac6173559da329ec9e820',
+        repo: 'gitalk',
+        owner: 'silence',
+        admin: "silence",
+        id: '2020-06-21T06-54-44',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Sun Jun 21 2020 06:54:44 GMT+0800',
+    owner: 'silence',
+    repo: 'gitalk',
+    oauth: {
+        client_id: '6e237847249f94cf5407',
+        client_secret: 'e1ab731e27b73125202ac6173559da329ec9e820'
+    }
+});
+
+gitment.render('gitment-content');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/062137065.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="MyBlog前端开发2">
+                        
+                        <span class="card-title">MyBlog前端开发2</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MyBlog个人博客前端开发（二）作者：silence
+编写日期：2020-06-20
+分类：学习记录
+项目演示地址：MyBlog演示地址
+
+一、前言昨天我们介绍了个人博客开发的背景、系统叙述、功能介绍以及首页的开发，我们主要说了如何做，至
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E3%80%81%E5%BC%80%E5%8F%91/" class="post-category">
+                                    学习、开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">前端开发</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">博客项目</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06202302.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="MyBlog前端开发">
+                        
+                        <span class="card-title">MyBlog前端开发</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MyBlog个人博客前端开发作者：silence
+编写日期：2020-06-20
+分类：学习记录
+项目演示地址：MyBlog演示地址
+
+一、背景因为这几天在尝试着搭建一个自己的个人博客平台，然后逛b站的时候就看到一个讲解使用SpringBo
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E3%80%81%E5%BC%80%E5%8F%91/" class="post-category">
+                                    学习、开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">前端开发</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">博客项目</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('20')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: silence<br />'
+            + '文章作者: silence<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="7404095242"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">silence</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">8.1k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "6";
+                    var startDate = "18";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/silence-moon/silence-moon.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:406685901@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=406685901" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 406685901" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

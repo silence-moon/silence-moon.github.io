@@ -550,7 +550,7 @@
 
     &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
-<p>这个外部盒子说白了就是一个容器，嗯，这个nav标签暂时可以加，也可以不加，只是成品上面会用得着，<br>就先加着吧。 class里面的 ui 说明这里使用的是 semantic ui 的 ui 组件，然后，这里为了简便，<br>直接使用 inverted 将背景设置成黑色（注：默认是白色，而 inverted 是置反的意思），<br>attached 一般的用法是将上下连在一起，如下图所示：<br><img src="/2020/%E9%A6%96%E9%A1%B5%E6%9E%B6%E6%9E%84.png" alt="首页架构"><br>这里的“文章列表”框里，顶部的“博客”、“共**篇”和下方的文章内容是连在一起的，就是使用的attached这个<br>属性，segment说明这是一个段，m-padding-tb-mini 是在me.css中自定义的一个样式，顾名思义，就是<br>自定义的内边距，关于上下的（t：top；b：bottom）的一个mini值，当然，除了mini外，还有tiny、small、<br>normal(不写即为normal)、large、big、huge、massive等等几个级别，嗯，反正就是一组样式了，给自己<br>定义好一个规则之后，以后不就可以偷点懒，直接拿来用了嘛！</p>
+<p>这个外部盒子说白了就是一个容器，嗯，这个nav标签暂时可以加，也可以不加，只是成品上面会用得着，<br>就先加着吧。 class里面的 ui 说明这里使用的是 semantic ui 的 ui 组件，然后，这里为了简便，<br>直接使用 inverted 将背景设置成黑色（注：默认是白色，而 inverted 是置反的意思），<br>attached 一般的用法是将上下连在一起，如下图所示：<br><img src="https://img-blog.csdnimg.cn/20200621125732789.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDE0Mzc4MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>这里的“文章列表”框里，顶部的“博客”、“共**篇”和下方的文章内容是连在一起的，就是使用的attached这个<br>属性，segment说明这是一个段，m-padding-tb-mini 是在me.css中自定义的一个样式，顾名思义，就是<br>自定义的内边距，关于上下的（t：top；b：bottom）的一个mini值，当然，除了mini外，还有tiny、small、<br>normal(不写即为normal)、large、big、huge、massive等等几个级别，嗯，反正就是一组样式了，给自己<br>定义好一个规则之后，以后不就可以偷点懒，直接拿来用了嘛！</p>
 <p>(2).内部的菜单和搜索框</p>
 <pre><code class="HTML">&lt;!-- 为了适应移动端，这里需要加一个属性stackable,表示可堆叠 --&gt;
 &lt;div class=&quot;ui inverted secondary stackable menu&quot;&gt;

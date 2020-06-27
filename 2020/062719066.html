@@ -519,7 +519,8 @@ x.size()[1], x.size(1) # 查看列的个数, 两种写法等价</code></pre>
 
 
 
-(3, 3)</code></pre><h4 id="【注】torch-Size-是tuple对象的子类，因此它支持tuple的所有操作，如x-size-0"><a href="#【注】torch-Size-是tuple对象的子类，因此它支持tuple的所有操作，如x-size-0" class="headerlink" title="【注】torch.Size 是tuple对象的子类，因此它支持tuple的所有操作，如x.size()[0]"></a>【注】torch.Size 是tuple对象的子类，因此它支持tuple的所有操作，如x.size()[0]</h4><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><pre><code class="python">y = t.rand(5, 3)
+(3, 3)</code></pre><p><strong>【注】torch.Size 是tuple对象的子类，因此它支持tuple的所有操作，如x.size()[0]</strong></p>
+<h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><pre><code class="python">y = t.rand(5, 3)
 # 加法的第一种写法
 x + y</code></pre>
 <pre><code>tensor([[0.4237, 0.8735, 0.9449],
@@ -643,7 +644,7 @@ x.grad.data.zero_()</code></pre>
 x.grad</code></pre>
 <pre><code>tensor([[1., 1.],
         [1., 1.]])</code></pre><h2 id="3-神经网络"><a href="#3-神经网络" class="headerlink" title="3.神经网络"></a>3.神经网络</h2><p>Autograd实现了反向传播功能，但是直接用来写深度学习的代码在很多情况下还是稍显复杂，torch.nn是专门为神经网络设计的模块化接口。nn构建于 Autograd之上，可用来定义和运行神经网络。nn.Module是nn中最重要的类，可把它看成是一个网络的封装，包含网络各层定义以及forward方法，调用forward(input)方法，可返回前向传播的结果。</p>
-<h4 id="定义网络"><a href="#定义网络" class="headerlink" title="定义网络"></a>定义网络</h4><p>定义网络时，需要继承nn.Module，并实现它的forward方法，把网络中具有可学习参数的层放在构造函数<strong>init</strong>中。如果某一层(如ReLU)不具有可学习的参数，则既可以放在构造函数中，也可以不放，但建议不放在其中，而在forward中使用nn.functional代替。</p>
+<h3 id="定义网络"><a href="#定义网络" class="headerlink" title="定义网络"></a>定义网络</h3><p>定义网络时，需要继承nn.Module，并实现它的forward方法，把网络中具有可学习参数的层放在构造函数<strong>init</strong>中。如果某一层(如ReLU)不具有可学习的参数，则既可以放在构造函数中，也可以不放，但建议不放在其中，而在forward中使用nn.functional代替。</p>
 <pre><code class="python">import torch.nn as nn
 import torch.nn.functional as F
 
@@ -855,7 +856,8 @@ optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9) </code></pre>
 <li>前向传播+反向传播</li>
 <li>更新参数</li>
 </ul>
-<h4 id="torch-set-num-threads-int-设定用于并行化CPU操作的OpenMP线程数"><a href="#torch-set-num-threads-int-设定用于并行化CPU操作的OpenMP线程数" class="headerlink" title="torch.set_num_threads(int): 设定用于并行化CPU操作的OpenMP线程数"></a>torch.set_num_threads(int): 设定用于并行化CPU操作的OpenMP线程数</h4><p>不设置，cpu51%，时间15ms</p>
+<p><strong>torch.set_num_threads(int): 设定用于并行化CPU操作的OpenMP线程数</strong></p>
+<p>不设置，cpu51%，时间15ms</p>
 <p>2的时候，cpu17%,时间15ms变为25ms</p>
 <p>4的时候，cpu34%，时间17ms</p>
 <p>8的时候，cpu67%</p>
@@ -918,13 +920,13 @@ with t.no_grad():
 print(&#39;10000张测试集中的准确率为: %d %%&#39; % (100 * correct / total))</code></pre>
 <p>10000张测试集中的准确率为: 53 %</p>
 <p>训练的准确率远比随机猜测(准确率10%)好，证明网络确实学到了东西。</p>
-<h4 id="对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。"><a href="#对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。" class="headerlink" title="对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。"></a>对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。</h4><ol>
+<h2 id="对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。"><a href="#对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。" class="headerlink" title="对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。"></a>对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。</h2><ol>
 <li>Tensor: 类似Numpy数组的数据结构，与Numpy接口类似，可方便地互相转换。</li>
 <li>autograd/: 为tensor提供自动求导功能。</li>
 <li>nn: 专门为神经网络设计的接口，提供了很多有用的功能(神经网络层，损失函数，优化器等)。</li>
 <li>神经网络训练: 以CIFAR-10分类为例演示了神经网络的训练流程，包括数据加载、网络搭建、训练及测试。</li>
 </ol>
-<p>参考书目：《深度学习框架 PyTorch 入门与实战》 陈云 编著</p>
+<p><strong>参考书目：《深度学习框架 PyTorch 入门与实战》 陈云 编著</strong></p>
 
             </div>
             <hr/>

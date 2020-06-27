@@ -519,7 +519,7 @@ x.size()[1], x.size(1) # 查看列的个数, 两种写法等价</code></pre>
 
 
 
-(3, 3)</code></pre><p><strong>【注】torch.Size 是tuple对象的子类，因此它支持tuple的所有操作，如x.size()[0]</strong></p>
+(3, 3)</code></pre><p>【注】torch.Size 是tuple对象的子类，因此它支持tuple的所有操作，如x.size()[0]</p>
 <h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><pre><code class="python">y = t.rand(5, 3)
 # 加法的第一种写法
 x + y</code></pre>
@@ -568,7 +568,8 @@ tensor([[0.4237, 0.8735, 0.9449],
         [1.7534, 1.3813, 1.5050],
         [0.5260, 1.1490, 0.7811],
         [1.4929, 0.8446, 1.1280],
-        [0.3338, 1.5457, 0.8867]])</code></pre><h4 id="【注】函数名后面带下划线-的函数会修改Tensor本身。例如，x-add-y-和x-t-会改变-x，但x-add-y-和x-t-返回一个新的Tensor，-而x不变。"><a href="#【注】函数名后面带下划线-的函数会修改Tensor本身。例如，x-add-y-和x-t-会改变-x，但x-add-y-和x-t-返回一个新的Tensor，-而x不变。" class="headerlink" title="【注】函数名后面带下划线_ 的函数会修改Tensor本身。例如，x.add_(y)和x.t_()会改变 x，但x.add(y)和x.t()返回一个新的Tensor， 而x不变。"></a>【注】函数名后面带下划线_ 的函数会修改Tensor本身。例如，x.add_(y)和x.t_()会改变 x，但x.add(y)和x.t()返回一个新的Tensor， 而x不变。</h4><pre><code class="python"># Tensor的选取操作与Numpy类似：这里输出x的第1列（下标从0开始）数据
+        [0.3338, 1.5457, 0.8867]])</code></pre><p>【注】函数名后面带下划线_ 的函数会修改Tensor本身。例如，x.add_(y)和x.t_()会改变 x，但x.add(y)和x.t()返回一个新的Tensor， 而x不变。</p>
+<pre><code class="python"># Tensor的选取操作与Numpy类似：这里输出x的第1列（下标从0开始）数据
 print(x)
 print(x[:, 1])</code></pre>
 <pre><code>tensor([[0.0626, 0.2190, 0.8587],
@@ -576,7 +577,8 @@ print(x[:, 1])</code></pre>
         [0.1144, 0.4394, 0.7455],
         [0.5614, 0.7953, 0.2981],
         [0.2485, 0.6495, 0.5445]])
-tensor([0.2190, 0.4278, 0.4394, 0.7953, 0.6495])</code></pre><h4 id="Tensor还支持很多操作，包括数学运算、线性代数、选择、切片等等，其接口设计与Numpy极为相似。更详细的使用方法，会在第三章系统讲解。Tensor和Numpy的数组之间的互操作非常容易且快速。对于Tensor不支持的操作，可以先转为Numpy数组处理，之后再转回Tensor。"><a href="#Tensor还支持很多操作，包括数学运算、线性代数、选择、切片等等，其接口设计与Numpy极为相似。更详细的使用方法，会在第三章系统讲解。Tensor和Numpy的数组之间的互操作非常容易且快速。对于Tensor不支持的操作，可以先转为Numpy数组处理，之后再转回Tensor。" class="headerlink" title="Tensor还支持很多操作，包括数学运算、线性代数、选择、切片等等，其接口设计与Numpy极为相似。更详细的使用方法，会在第三章系统讲解。Tensor和Numpy的数组之间的互操作非常容易且快速。对于Tensor不支持的操作，可以先转为Numpy数组处理，之后再转回Tensor。"></a>Tensor还支持很多操作，包括数学运算、线性代数、选择、切片等等，其接口设计与Numpy极为相似。更详细的使用方法，会在第三章系统讲解。Tensor和Numpy的数组之间的互操作非常容易且快速。对于Tensor不支持的操作，可以先转为Numpy数组处理，之后再转回Tensor。</h4><pre><code class="python">a = t.ones(5) # 新建一个全1的Tensor
+tensor([0.2190, 0.4278, 0.4394, 0.7953, 0.6495])</code></pre><p>Tensor还支持很多操作，包括数学运算、线性代数、选择、切片等等，其接口设计与Numpy极为相似。更详细的使用方法，会在第三章系统讲解。Tensor和Numpy的数组之间的互操作非常容易且快速。对于Tensor不支持的操作，可以先转为Numpy数组处理，之后再转回Tensor。</p>
+<pre><code class="python">a = t.ones(5) # 新建一个全1的Tensor
 a</code></pre>
 <pre><code>tensor([1., 1., 1., 1., 1.])</code></pre><pre><code class="python">b = a.numpy() # Tensor -&gt; Numpy
 b</code></pre>
@@ -586,7 +588,8 @@ b = t.from_numpy(a) # Numpy-&gt;Tensor
 print(a)
 print(b)</code></pre>
 <pre><code>[1. 1. 1. 1. 1.]
-tensor([1., 1., 1., 1., 1.], dtype=torch.float64)</code></pre><h4 id="Tensor和numpy对象共享内存，所以他们之间的转换很快，而且几乎不会消耗什么资源。但这也意味着，如果其中一个变了，另外一个也会随之改变。"><a href="#Tensor和numpy对象共享内存，所以他们之间的转换很快，而且几乎不会消耗什么资源。但这也意味着，如果其中一个变了，另外一个也会随之改变。" class="headerlink" title="Tensor和numpy对象共享内存，所以他们之间的转换很快，而且几乎不会消耗什么资源。但这也意味着，如果其中一个变了，另外一个也会随之改变。"></a>Tensor和numpy对象共享内存，所以他们之间的转换很快，而且几乎不会消耗什么资源。但这也意味着，如果其中一个变了，另外一个也会随之改变。</h4><pre><code class="python">b.add_(1) # 以`_`结尾的函数会修改自身
+tensor([1., 1., 1., 1., 1.], dtype=torch.float64)</code></pre><p>Tensor和numpy对象共享内存，所以他们之间的转换很快，而且几乎不会消耗什么资源。但这也意味着，如果其中一个变了，另外一个也会随之改变。</p>
+<pre><code class="python">b.add_(1) # 以`_`结尾的函数会修改自身
 print(a)
 print(b) # Tensor和Numpy共享内存</code></pre>
 <pre><code>[2. 2. 2. 2. 2.]
@@ -920,7 +923,8 @@ with t.no_grad():
 print(&#39;10000张测试集中的准确率为: %d %%&#39; % (100 * correct / total))</code></pre>
 <p>10000张测试集中的准确率为: 53 %</p>
 <p>训练的准确率远比随机猜测(准确率10%)好，证明网络确实学到了东西。</p>
-<h2 id="对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。"><a href="#对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。" class="headerlink" title="对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。"></a>对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。</h2><ol>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>对PyTorch的基础介绍至此结束。总结一下，本节主要包含以下内容。</p>
+<ol>
 <li>Tensor: 类似Numpy数组的数据结构，与Numpy接口类似，可方便地互相转换。</li>
 <li>autograd/: 为tensor提供自动求导功能。</li>
 <li>nn: 专门为神经网络设计的接口，提供了很多有用的功能(神经网络层，损失函数，优化器等)。</li>
